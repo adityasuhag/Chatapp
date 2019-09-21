@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t chat-app .'
+        sh 'docker build -t chatapp .'
       }
     }
   }
