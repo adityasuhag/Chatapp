@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t adityasuhag/chatapp:part1'
+        sh 'docker build -t'
       }
     }
   }
