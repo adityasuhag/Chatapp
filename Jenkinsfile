@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Tag and Push Image') {
       steps {
-        sh 'docker tag chat-app nitinbhojwani/chat-app'
+        sh 'docker tag "chat-app" "nitinbhojwani/chat-app"'
       }
     }
   }
