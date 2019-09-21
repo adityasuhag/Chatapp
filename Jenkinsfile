@@ -3,13 +3,14 @@ pipeline {
   stages {
     stage('Docker Build') {
       steps {
-        sh 'docker build -t chatapp .'
-        sh 'docker tag'
+        sh '''# docker build -t chatapp .
+docker pull adityasuhag/chatapp'''
       }
     }
     stage('Tag and Push Image') {
       steps {
-        sh 'docker tag "chat-app" "nitinbhojwani/chat-app"'
+        sh 'docker tag adityasuhag/chatapp nitinbhojwani/chat-app'
+        sh 'docker push nitinbhojwani/chat-app'
       }
     }
   }
